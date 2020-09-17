@@ -13,5 +13,10 @@ def CosineSimilarity(v1, v2):
     mod2 = numpy.sqrt((a2*a2).sum())
     
     mod = mod1 * mod2
-    ans = float(product) / mod
+    if mod == 0:
+        ans = 0
+    else:
+        ans = float(product) / mod
+
     return ans
+
